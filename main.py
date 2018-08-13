@@ -23,5 +23,11 @@ class Key:
                     key += '-'
                     portion = ''
 
-            return key
+            if Key(key).verify():
+                return key
+            else:
+                print(key+": Invalid key")
+                key = ''
 
+    def verify(self):
+        print("d")
